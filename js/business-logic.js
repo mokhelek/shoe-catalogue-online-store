@@ -15,11 +15,17 @@ function shoeCatalogue(){
         return filteredShoes
     }
 
+    
+    // ? When uploading, if the shoe details is exactly the same as one of the shoes then just increment the stock
+    // ! push the shoes data to local storage from the shoe data file , I mean it's not logic moc ....
 
+    function addNewShoe(newShoeDetails){
+        shoesInstance.setNewShoes(newShoeDetails);
+    }
 
     return {
-
         myFilterFunction,
+        addNewShoe,
     }
 
 }

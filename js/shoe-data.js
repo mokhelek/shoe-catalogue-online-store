@@ -1,6 +1,19 @@
+
+
 function shoesData() {
+
+    let shoesStock = {
+        shoesArray:[]
+    };
+
+    if ( localStorage["stored-shoes"] ){
+        shoesStock = JSON.parse(localStorage["stored-shoes"])
+    }
+    
+    /*
     let shoesStock = {
         shoesArray: [
+            
             {
                 title: "Air Jordan 11",
                 brand: "Mike",
@@ -51,6 +64,18 @@ function shoesData() {
             },
         ],
     };
+    */
+    
+    function setNewShoes(newShoesObj){
+            shoesStock.shoesArray.push(newShoesObj);
+
+        storeNewShoes()
+    }
+    
+    function storeNewShoes(){
+        localStorage["stored-shoes"] = JSON.stringify(getShoes()) 
+    }
+
 
     function getShoes() {
         return shoesStock;
@@ -58,5 +83,6 @@ function shoesData() {
 
     return {
         getShoes,
+        setNewShoes,
     };
 }

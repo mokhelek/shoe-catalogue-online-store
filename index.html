@@ -37,7 +37,7 @@
                 <option  value = "8"> size  8 </option>
             </select>
             &nbsp;&nbsp;&nbsp;
-            <input onchange="filterFunctionClicked()"  type="text" placeholder="Search for shoes ..." class="title-search-filter">
+            <input onchange="filterFunctionClicked()"  type="search" placeholder="Search for shoes ..." class="title-search-filter">
         </div>
     
         <br>
@@ -52,7 +52,7 @@
             {{#each shoesArray}}
                 <div class="col-md-3">
                     <div  class="shoe-box card">
-                        <img class="img-fluid" src="images/1050187.jpeg" alt="">
+                        <img class="img-fluid" src="https://res.cloudinary.com/shelflife-online/image/upload/c_fill,f_auto,q_auto:best,w_681/v1575961299/uploads/assets/f89-162050c-side-476.jpg" alt="">
                         <div class="card-body">
                             <h6 style="margin-bottom: 0rem;"> {{this.title}} </h6>
                             <small style="color: gray;">  {{this.brand}}  </small>
