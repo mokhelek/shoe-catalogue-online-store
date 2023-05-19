@@ -3,7 +3,7 @@ const newShoesForm = document.querySelector(".new-shoe-form");
 let shoeCatalogueInstance = shoeCatalogue();
 
 newShoesForm.addEventListener("submit", function (event) {
-    event.preventDefault();
+    // event.preventDefault();
 
     let title = document.querySelector("#title").value;
     let brand = document.querySelector("#brand").value;

@@ -50,9 +50,9 @@
 
         <script type="text/x-template" class="shoe-box-template" >
             {{#each shoesArray}}
-                <div class="col-md-3">
+                <div class="col-md-3 col-6 ">
                     <div  class="shoe-box card">
-                        <img class="img-fluid" src="https://res.cloudinary.com/shelflife-online/image/upload/c_fill,f_auto,q_auto:best,w_681/v1575961299/uploads/assets/f89-162050c-side-476.jpg" alt="">
+                        <img style="height:11rem" class="img-fluid" src="{{this.image}}" alt="">
                         <div class="card-body">
                             <h6 style="margin-bottom: 0rem;"> {{this.title}} </h6>
                             <small style="color: gray;">  {{this.brand}}  </small>
