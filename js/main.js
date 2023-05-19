@@ -8,10 +8,35 @@ let compiledTemplate = Handlebars.compile(shoeBoxTemplate);
 
 let shoes = shoesInstance.getShoes(); // ? data in a form of array
 
-const brandFilterDropdown = document.querySelector(".brand-filter-dropdown");
+
+
+const brandFilterDropdown = document.querySelector(".brand-filter-dropdown"); // * my placeholder ...
 const colorFilterDropdown = document.querySelector(".color-filter-dropdown");
 const sizeFilterDropdown = document.querySelector(".size-filter-dropdown");
 const titleSearchFilter = document.querySelector(".title-search-filter");
+
+// ********************************* BRAND NAMES FILTERING **********************************
+let brandsArray = shoeCatalogueInstance.getAllTheBrands()
+const brandFilterTemplate  = document.querySelector(".brand-filter-template").innerHTML;
+let compiledBrandTemplate = Handlebars.compile(brandFilterTemplate)
+
+brandFilterDropdown.innerHTML = compiledBrandTemplate(brandsArray);
+
+// ********************************* Colors FILTERING **********************************
+
+let colorsArray = shoeCatalogueInstance.getAllTheColors()
+const colorFilterTemplate  = document.querySelector(".color-filter-template").innerHTML;
+let compiledColorTemplate = Handlebars.compile(colorFilterTemplate)
+
+colorFilterDropdown.innerHTML = compiledBrandTemplate(colorsArray);
+
+
+
+
+
+
+
+
 
 function filterFunctionClicked() {
     console.log(titleSearchFilter.value, brandFilterDropdown.value, colorFilterDropdown.value, sizeFilterDropdown.value);

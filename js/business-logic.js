@@ -15,6 +15,35 @@ function shoeCatalogue(){
         return filteredShoes
     }
 
+    function getAllTheBrands(){
+        // ! Working ... I can get all the brand names ...
+        let shoeArray = shoesInstance.getShoes().shoesArray ; // * My array of objects
+
+        const uniqueBrands = new Set() ;
+
+        for(const shoeObj of shoeArray){
+            uniqueBrands.add(shoeObj.brand) ;
+        }
+
+        let uniqueBrandsArray = Array.from(uniqueBrands)
+
+        return uniqueBrandsArray;
+    }
+    function getAllTheColors(){
+        // ! Working ... I can get all the colors ...
+        // todo : -> since the colors come in the form of hex code, use template to display the actual visual colors
+        let shoeArray = shoesInstance.getShoes().shoesArray ; // * My array of objects
+
+        const uniqueColors = new Set() ;
+
+        for(const shoeObj of shoeArray){
+            uniqueColors.add(shoeObj.color) ;
+        }
+
+        let uniqueColorsArray = Array.from(uniqueColors)
+
+        return uniqueColorsArray ;
+    }
     
     // ? When uploading, if the shoe details is exactly the same as one of the shoes then just increment the stock
 
@@ -25,6 +54,8 @@ function shoeCatalogue(){
     return {
         myFilterFunction,
         addNewShoe,
+        getAllTheBrands,
+        getAllTheColors,
     }
 
 }

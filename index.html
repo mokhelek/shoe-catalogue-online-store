@@ -13,13 +13,19 @@
     <div class="container">
         <div class="d-flex">
             <select id="dropDown" onchange="filterFunctionClicked()" class="color-filter-dropdown" > 
-                <option value="">  Color </option>
+                <option value="" > Color </option>
                 <option  value="blue">  Blue </option>
                 <option  value = "black"> black </option>
                 <option  value = "red">  Red </option>
                 <option  value = "green">   Green </option>
 
             </select>
+            <script type="text/x-template" class="color-filter-template" >
+                <option value="">Color</option>
+                {{#each this}}
+                    <option value="{{this}}">{{this}}</option>
+                {{/each}}
+            </script>
             &nbsp;&nbsp;&nbsp;
             <select id="dropDown" onchange="filterFunctionClicked()" class="brand-filter-dropdown" > 
                 <option value="">  Brand </option>
@@ -27,6 +33,13 @@
                 <option  value = "carvela"> Carvela </option>
                 <option  value = "Bass"> Bass</option>
             </select>
+
+            <script type="text/x-template" class="brand-filter-template" >
+                <option value="">Brand</option>
+                {{#each this}}
+                    <option value="{{this}}">{{this}}</option>
+                {{/each}}
+            </script>
             &nbsp;&nbsp;&nbsp;
             <select id="dropDown" onchange="filterFunctionClicked()" class="size-filter-dropdown"> 
                 <option value="">  Size </option>
@@ -38,6 +51,9 @@
             </select>
             &nbsp;&nbsp;&nbsp;
             <input onchange="filterFunctionClicked()"  type="search" placeholder="Search for shoes ..." class="title-search-filter">
+            &nbsp;&nbsp;&nbsp;
+            <a target="_blank" href="newShoe.html">add new shoe</a>
+       
         </div>
     
         <br>
