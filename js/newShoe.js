@@ -11,6 +11,8 @@ newShoesForm.addEventListener("submit", function (event) {
     let price = document.querySelector("#price").value;
     let image = document.querySelector("#image").value;
     let color = document.querySelector("#color").value;
+    let quantity = document.querySelector("#quantity").value ;
+
 
     const newShoeDetails = {
         title,
@@ -18,7 +20,8 @@ newShoesForm.addEventListener("submit", function (event) {
         size,
         price,
         image,
-        color 
+        color,
+        quantity:Number(quantity)
     };
 
     shoeCatalogueInstance.addNewShoe(newShoeDetails);
