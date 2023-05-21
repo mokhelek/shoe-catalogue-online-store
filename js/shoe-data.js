@@ -7,37 +7,14 @@ function shoesData() {
         shoesStock = JSON.parse(localStorage["stored-shoes"]);
     }
 
-    /*
-        let Array = [
-            {
-            title: "Air Jordan 11",
-            brand: "Mike",
-            color: "red",
-            price: 5550,
-            in_stock: 5,
-            size: "6",
-            quantity : 10
-        },
-        {
-            title: "Air Jordan 11",
-            brand: "Mike",
-            color: "red",
-            price: 5550,
-            in_stock: 5,
-            size: "6",
-            quantity : 6
+    /* 
 
-        },
-        
-    ]
-
-    * first loop through the array
-    * each array has an object containing shoe details
-    * then iterate the object
-    * use conditional statements to check if the details of the current objects being iterated match the new objects
-    * if they match, add the quantities of the 2 objects
-    * if they do not match then add the new object as a new member of the list
-
+        * first loop through the array
+        * each array has an object containing shoe details
+        * then iterate the object
+        * use conditional statements to check if the details of the current objects being iterated match the new objects
+        * if they match, add the quantities of the 2 objects
+        * if they do not match then add the new object as a new member of the list
 
     */
 

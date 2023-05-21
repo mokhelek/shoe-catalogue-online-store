@@ -16,19 +16,19 @@ const sizeFilterDropdown = document.querySelector(".size-filter-dropdown");
 const titleSearchFilter = document.querySelector(".title-search-filter");
 
 // ********************************* BRAND NAMES FILTERING **********************************
-let brandsArray = shoeCatalogueInstance.getAllTheBrands()
-const brandFilterTemplate  = document.querySelector(".brand-filter-template").innerHTML;
-let compiledBrandTemplate = Handlebars.compile(brandFilterTemplate)
+let brandsArray = shoeCatalogueInstance.getAllTheBrands() ;
+const brandFilterTemplate  = document.querySelector(".brand-filter-template").innerHTML ;
+let compiledBrandTemplate = Handlebars.compile(brandFilterTemplate) ;
 
 brandFilterDropdown.innerHTML = compiledBrandTemplate(brandsArray);
 
 // ********************************* Colors FILTERING **********************************
 
-let colorsArray = shoeCatalogueInstance.getAllTheColors()
-const colorFilterTemplate  = document.querySelector(".color-filter-template").innerHTML;
-let compiledColorTemplate = Handlebars.compile(colorFilterTemplate)
+let colorsArray = shoeCatalogueInstance.getAllTheColors() ;
+const colorFilterTemplate  = document.querySelector(".color-filter-template").innerHTML ;
+let compiledColorTemplate = Handlebars.compile(colorFilterTemplate) ;
 
-colorFilterDropdown.innerHTML = compiledBrandTemplate(colorsArray);
+colorFilterDropdown.innerHTML = compiledColorTemplate(colorsArray) ;
 
 
 
