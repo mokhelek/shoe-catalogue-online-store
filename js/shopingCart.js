@@ -29,26 +29,49 @@
         * -> Store the new shoes
 */
 
-function shoppingCart(shoeId, stock) {
+/*
+
+    TODO : --> Upon adding the shoe in the cart, add a temporary key to the shoe object that tracks the buy quantity
+
+*/
+
+function shoppingCart() {
     let shoesInstance = shoesData();
 
     let cartArray = [];
+    if (localStorage["cart-shoes"]) {
+        cartArray = JSON.parse(localStorage["cart-shoes"]);
+    }
 
-    function addShoe() {
+    function addShoe(shoeId) {
         function findShoe() {
             let shoeDetails = shoesInstance.getShoes().shoesArray.find((shoe) => shoe.id == shoeId);
             return shoeDetails;
         }
 
-        let indexOfShoe = shoesInstance.getShoes().shoesArray.indexOf(findShoe());
+        let cartShoe = findShoe();
 
-        let selectedShoe = shoesInstance.getShoes().shoesArray[indexOfShoe];
+        let checkShoeInCart = getSelectedShoes().some((obj) => obj.id == cartShoe.id);
 
-        if (cartArray.includes(selectedShoe)) {
-            //
+        if (checkShoeInCart) {
+            alert("already in the cart");
         } else {
-            cartArray.push(selectedShoe);
+            cartShoe.buyQuantity = 1;
+            cartArray.push(cartShoe);
+            storeSelectedShoes();
         }
+    }
+
+    function updateStockQuantity(shoeId, buyQuantity) {
+        function findShoe() {
+            let cartShoeDetails = getSelectedShoes().find((shoe) => shoe.id == shoeId);
+            return cartShoeDetails; // returns the actual shoe obj
+        }
+        let indexOfCartShoe = getSelectedShoes().indexOf(findShoe());
+
+        cartArray[indexOfCartShoe].quantity = Number(cartArray[indexOfCartShoe].quantity) - buyQuantity;
+        cartArray[indexOfCartShoe].buyQuantity = buyQuantity;
+        storeSelectedShoes();
     }
 
     function getSelectedShoes() {
@@ -56,10 +79,11 @@ function shoppingCart(shoeId, stock) {
     }
 
     function storeSelectedShoes() {
-        localStorage["cart-shoes"] = getSelectedShoes();
+        localStorage["cart-shoes"] = JSON.stringify(getSelectedShoes());
     }
 
     return {
         addShoe,
+        updateStockQuantity,
     };
 }
