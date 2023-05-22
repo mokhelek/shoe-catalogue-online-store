@@ -32,19 +32,30 @@ colorFilterDropdown.innerHTML = compiledColorTemplate(colorsArray) ;
 
 
 
-
-
-
-
-
-
 function filterFunctionClicked() {
     console.log(titleSearchFilter.value, brandFilterDropdown.value, colorFilterDropdown.value, sizeFilterDropdown.value);
     shoes.shoesArray = shoeCatalogueInstance.myFilterFunction(titleSearchFilter.value, brandFilterDropdown.value, colorFilterDropdown.value, sizeFilterDropdown.value);
     shoeBoxPlaceholder.innerHTML = compiledTemplate(shoes);
 }
+
 shoeBoxPlaceholder.innerHTML = compiledTemplate(shoes);
 
+// **********************************  Shopping Cart Counter  **********************************
+
+const cartCounterElem = document.querySelector(".cartCounter");
+
+let cartItemsCounter = 0 ;
+let cartItemsArr = [] ;
+
+if(localStorage["cart-shoes"]){
+    cartItemsArr = JSON.parse(localStorage["cart-shoes"]) ;
+}
+ for(let shoeObj of cartItemsArr){
+    cartItemsCounter += shoeObj.buyQuantity ;
+ }
+
+
+cartCounterElem.innerHTML = cartItemsCounter ;
 
 
 

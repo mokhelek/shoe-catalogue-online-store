@@ -57,21 +57,38 @@ function shoppingCart() {
             alert("already in the cart");
         } else {
             cartShoe.buyQuantity = 1;
+            cartShoe.total = cartShoe.price ;
+            cartShoe.maximumItems = cartShoe.quantity ;
             cartArray.push(cartShoe);
+            
             storeSelectedShoes();
+
+            updateStockQuantity(shoeId,1 ,"increase") 
         }
     }
 
-    function updateStockQuantity(shoeId, buyQuantity) {
+    function updateStockQuantity(shoeId, buyQuantity ,action) {
         function findShoe() {
             let cartShoeDetails = getSelectedShoes().find((shoe) => shoe.id == shoeId);
-            return cartShoeDetails; // returns the actual shoe obj
+            return cartShoeDetails;
         }
+
         let indexOfCartShoe = getSelectedShoes().indexOf(findShoe());
 
-        cartArray[indexOfCartShoe].quantity = Number(cartArray[indexOfCartShoe].quantity) - buyQuantity;
+        if(action === "increase"){
+
+            cartArray[indexOfCartShoe].quantity = Number(cartArray[indexOfCartShoe].quantity) - 1;
+
+        }else{
+
+            cartArray[indexOfCartShoe].quantity = Number(cartArray[indexOfCartShoe].quantity) + 1;
+
+        }
+
         cartArray[indexOfCartShoe].buyQuantity = buyQuantity;
+        cartArray[indexOfCartShoe].total = Number(cartArray[indexOfCartShoe].price) * buyQuantity;
         storeSelectedShoes();
+        location.reload()
     }
 
     function getSelectedShoes() {

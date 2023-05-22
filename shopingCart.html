@@ -60,7 +60,7 @@
 
                                     <span  item="6" class="quantity-counter-{{this.id}}" style="padding: 0.5rem 0.8rem 0.5rem 0.8rem ;border: 1px rgb(198, 198, 198) solid; " > {{this.buyQuantity}} </span>
 
-                                    <button style="border: none;background: none;" onclick="quantityDOM('increase',{{this.id}},{{this.quantity}})" class="btn btn-outline-secondary btn-sm" > 
+                                    <button style="border: none;background: none;" onclick="quantityDOM('increase',{{this.id}},{{this.maximumItems}})" class="btn btn-outline-secondary btn-sm" > 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-caret-right-fill text-dark" viewBox="0 0 16 16">
                                             <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
                                           </svg>
@@ -70,7 +70,7 @@
                                     R {{this.price}}
                                 </td>
                                 <td>
-                                    R {{this.price * this.buyQuantity}}
+                                    R {{this.total}}
                                 </td>
                             </tr>
 
@@ -128,11 +128,11 @@
 
             if (action === "increase" && Number(quantityCounterElem.innerHTML) < max){
                 quantityCounterElem.innerHTML = Number(quantityCounterElem.innerHTML) + 1 ;
-                shoppingCartInstance.updateStockQuantity(shoeId, Number(quantityCounterElem.innerHTML) );
+                shoppingCartInstance.updateStockQuantity(shoeId, Number(quantityCounterElem.innerHTML), action ) ;
 
             }else if(action === "decrease" && Number(quantityCounterElem.innerHTML) >= 1 ){
                 quantityCounterElem.innerHTML = Number(quantityCounterElem.innerHTML) - 1 ;
-                shoppingCartInstance.updateStockQuantity(shoeId, Number(quantityCounterElem.innerHTML) );
+                shoppingCartInstance.updateStockQuantity(shoeId, Number(quantityCounterElem.innerHTML), action );
 
             }
         }

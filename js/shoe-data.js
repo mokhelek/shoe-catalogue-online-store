@@ -1,7 +1,54 @@
 function shoesData() {
+
+    
     let shoesStock = {
-        shoesArray: [],
+        shoesArray: [
+            
+            {
+                title: "Bass Weejans",
+                brand: "GH BASS",
+                size: "8",
+                price: 5550,
+                image:"https://www.ghbass.com/media/catalog/product/b/a/baz2w455_baz2w455c15_on.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=410&width=410&canvas=410:410",
+                color: "red",
+                quantity: 5,
+                id:1
+            },
+            {
+                title: "John Craig",
+                brand: "Mike",
+                size: "6",
+                price: 2500,
+                image:"https://www.johncraig.co.za/wp-content/uploads/BAS02CO-BASS-OCG-WEEJUNS-VENETIAN-LEATHER-BROWN-BA91005E-0CG-V1-600x600.jpg",
+                color: "red",
+                quantity: 40,
+                id:2
+            },
+            {
+                title: "Gucci loafers",
+                brand: "Gucci",
+                size: "7",
+                price: 2500,
+                image:"https://image.harrods.com/gucci-leather-web-stripe-loafers_16165319_36472932_300.jpg" ,
+                color: "purple",
+                quantity: 25,
+                id:3
+            },
+            {
+                title: "Christian Louboutin leather loafers",
+                brand: "Christian Louboutin",
+                size: "7",
+                price: 6000,
+                image:"https://image.harrods.com/christian-louboutin-no-penny-patent-leather-loafers_19241760_43422425_300.jpg" ,
+                color: "red",
+                quantity: 65,
+                id:4
+            },
+            
+        ],
     };
+
+
 
     if (localStorage["stored-shoes"]) {
         shoesStock = JSON.parse(localStorage["stored-shoes"]);
@@ -16,62 +63,6 @@ function shoesData() {
         * if they match, add the quantities of the 2 objects
         * if they do not match then add the new object as a new member of the list
 
-    */
-
-    /*
-    let shoesStock = {
-        shoesArray: [
-            
-            {
-                title: "Air Jordan 11",
-                brand: "Mike",
-                color: "red",
-                price: 5550,
-                in_stock: 5,
-                size: "6",
-            },
-            {
-                title: "Summer Carvela",
-                brand: "carvela",
-                color: "blue",
-                price: 2000,
-                in_stock: 3,
-                size: "7",
-            },
-            {
-                title: "Bass Weejans",
-                brand: "Bass",
-                color: "green",
-                price: 3500,
-                in_stock: 26,
-                size: "4",
-            },
-            {
-                title: "Chuck Taylor 70",
-                brand: "Mike",
-                color: "blue",
-                price: 2700,
-                in_stock: 26,
-                size: "4",
-            },
-            {
-                title: "Vans Skater",
-                brand: "vans",
-                color: "red",
-                price: 200,
-                in_stock: 301,
-                size: "4",
-            },
-            {
-                title: "Air force 1",
-                brand: "Mike",
-                color: "blue",
-                price: 1500,
-                in_stock: 12,
-                size: "7",
-            },
-        ],
-    };
     */
 
     function setNewShoes(newShoesObj) {
