@@ -1,3 +1,19 @@
+Handlebars.registerHelper("gt",function(a, b, options){
+    if(a>b){
+        return options.fn(this);
+    }else{
+        return options.inverse(this)
+    }
+})
+
+
+var myCarousel = document.querySelector('#carouselExampleIndicators')
+var carousel = new bootstrap.Carousel(myCarousel, {
+  pause:false
+})
+
+
+
 let shoeCatalogueInstance = shoeCatalogue(); // * Factory function instance
 let shoesInstance = shoesData();
 

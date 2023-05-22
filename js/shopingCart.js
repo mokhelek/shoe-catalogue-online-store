@@ -43,6 +43,10 @@ function shoppingCart() {
         cartArray = JSON.parse(localStorage["cart-shoes"]);
     }
 
+    function getStockShoes(){
+        return shoesInstance;
+    }
+
     function addShoe(shoeId) {
         function findShoe() {
             let shoeDetails = shoesInstance.getShoes().shoesArray.find((shoe) => shoe.id == shoeId);
@@ -91,6 +95,29 @@ function shoppingCart() {
         location.reload()
     }
 
+    function buyFunction(){
+        let stockShoes =  shoesInstance.getShoes().shoesArray ; // ? this is just an array
+
+        let updatedShoeStock = {}
+
+        for(let cartObj of cartArray){
+            for(let stockObj of stockShoes){
+                if(cartObj.id == stockObj.id){
+                    stockObj.quantity = cartObj.quantity ;
+                    break;
+                }
+            }
+        }
+
+        updatedShoeStock.shoesArray = stockShoes ;
+
+        localStorage["stored-shoes"] =  JSON.stringify(updatedShoeStock) 
+        clearCartItems()
+        location.reload()
+
+    }
+
+
     function getSelectedShoes() {
         return cartArray;
     }
@@ -99,8 +126,13 @@ function shoppingCart() {
         localStorage["cart-shoes"] = JSON.stringify(getSelectedShoes());
     }
 
+    function clearCartItems(){
+        localStorage.removeItem("cart-shoes") ;
+    }
+
     return {
         addShoe,
         updateStockQuantity,
+        buyFunction,
     };
 }

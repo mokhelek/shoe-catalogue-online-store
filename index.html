@@ -1,144 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Shoe Catalogue | Mokhele Katleho</title>
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Shoe Catalogue | Mokhele Katleho</title>
+    </head>
 
-
-<nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-      <a style="margin-right: 5rem;" class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a  style="border:0rem;background: none;" class="nav-link btn btn-secondary" aria-current="page" href="index.html">Home</a>
-          </li>
-        
-          <li class="nav-item">
-            <a class="nav-link"  href="newShoe.html">Add Shoe</a>
-         </li>
-
-
-        </ul>
-        <a style="border: none;background: none;margin-right: 2rem;" target="_blank" href="shopingCart.html" class="btn btn-outline-secondary btn-sm position-relative nav-link" name="submit">
-            <div>
-              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
-                  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-              </svg>
-          
-              <span class="position-absolute top-0 start-50 badge rounded-pill bg-dark cartCounter " style="font-size: 0.65rem;margin-left: 0.75rem;" >
-                  0
-              </span>
-            </div>    
-        </a>
-        
-        <form class="d-flex" role="search">
-          <input onchange="filterFunctionClicked()" class="form-control me-2 form-control-sm title-search-filter" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success btn-sm" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-
-
-
-
-<body>
-
-    <div class="slide-wrapper">
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="2000">
-                <img style="height: 550px;width: 100%;" src="images/clem-onojeghuo-kPBfy6kDnjQ-unsplash.jpg" class="img-fluid" alt="...">
-            </div>
-              <div class="carousel-item " data-bs-interval="5000">
-                <img style="height: 550px;width: 100%;" src="images/1050187.jpeg" class="img-fluid" alt="...">
-              </div>
-              
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
+    <nav class="navbar navbar-expand-lg sticky-top" style="height: 65px; box-shadow: 0 0 6px rgb(58, 58, 58); background-color: white">
+        <div class="container-fluid">
+            <a style="margin-right: 5rem" class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-          <div align="center" class="text-container">
-              <h1 >MY HERO TEXT</h1>
-              <p style="width: 90%;" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam amet quo sequi? Magni, similique vitae, harum dolores.</p>
-          </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a style="border: 0rem; background: none" class="nav-link btn btn-secondary" aria-current="page" href="index.html">Home</a>
+                    </li>
 
-    </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="newShoe.html">Add Shoe</a>
+                    </li>
+                </ul>
+                <a style="border: none; background: none; margin-right: 2rem" target="_blank" href="shopingCart.html" class="btn-sm position-relative nav-link" name="submit">
+                    <div>
+                        <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                        <svg fill="#787878" width="30px" height="30px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3,22H21a1,1,0,0,0,1-1.077l-1-13A1,1,0,0,0,20,7H17A5,5,0,0,0,7,7H4a1,1,0,0,0-1,.923l-1,13A1,1,0,0,0,3,22ZM12,4a3,3,0,0,1,3,3H9A3,3,0,0,1,12,4ZM4.926,9H7v2a1,1,0,0,0,2,0V9h6v2a1,1,0,0,0,2,0V9h2.074l.846,11H4.08Z" /></svg>
+                        <!-- <span class="cartCounter" style="color: #4d4d4d ;">
+                     5 
+                </span> -->
+                        <span class="position-absolute top-0 start-50 badge rounded-pill bg-dark cartCounter" style="font-size: 0.65rem; margin-left: 0.6rem"> 0 </span>
+                    </div>
+                </a>
 
-
-
-
-    <div class="container">
-
-        <div style="background-color: rgb(31, 31, 31);padding: 1rem;color: white;" class="d-flex justify-content-center">
-            <select id="dropDown" onchange="filterFunctionClicked()" class="color-filter-dropdown nav-link" > 
-                
-            </select>
-            <script type="text/x-template" class="color-filter-template" >
-                <option value="" id="color-default" >All Colors</option>
-                {{#each this}}
-                    <option value="{{this}}" style="color: {{this}}" >{{this}}</option>
-                {{/each}}
-            </script>
-            &nbsp;&nbsp;&nbsp;
-            <select id="dropDown" onchange="filterFunctionClicked()" class="brand-filter-dropdown nav-link" > 
-                
-            </select>
-            <script type="text/x-template" class="brand-filter-template" >
-                <option value="">All Brands</option>
-                {{#each this}}
-                    <option value="{{this}}">{{this}}</option>
-                {{/each}}
-            </script>
-            &nbsp;&nbsp;&nbsp;
-            <select style="color: white;" id="dropDown" onchange="filterFunctionClicked()" class="size-filter-dropdown"> 
-                <option value=""> All Sizes </option>
-                <option  value="4"> size 4 </option>
-                <option  value = "5"> size 5  </option>
-                <option  value = "6"> size  6 </option>
-                <option  value = "7">size 7 </option>
-                <option  value = "8"> size  8 </option>
-            </select>
- 
+                <form class="d-flex" role="search">
+                    <input onchange="filterFunctionClicked()" class="form-control me-2 form-control-sm title-search-filter" type="search" placeholder="Search" aria-label="Search" />
+                    <button style="border-radius: 0" class="btn btn-outline-dark btn-sm" type="submit">Search</button>
+                </form>
+            </div>
         </div>
-    
-        <br>
-        <div class="row shoe-box-placeholder">
-            
-       
-        
-        </div>
-    </div>
+    </nav>
 
-        <script type="text/x-template" class="shoe-box-template" >
+    <body>
+        <div class="slide-wrapper">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 3"></button> -->
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <img style="height: 550px; width: 100%" src="images/michael-lee-5Z9bgfRZLLE-unsplash.jpg" class="img-fluid" alt="..." />
+                    </div>
+                    <!-- <div class="carousel-item d-none" data-bs-interval="3000">
+                    <img style="height: 550px;width: 100%;" src="images/clem-onojeghuo-kPBfy6kDnjQ-unsplash.jpg" class="img-fluid" alt="...">
+                </div> -->
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img style="height: 550px; width: 100%" src="images/andrew-neel-HqtYwlY9dxs-unsplash.jpg" class="img-fluid" alt="..." />
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img style="height: 550px; width: 100%" src="images/clem-onojeghuo-iuvLYv85r40-unsplash.jpg" class="img-fluid" alt="..." />
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div align="center" class="text-container">
+                <h1>MY HERO TEXT</h1>
+                <p style="width: 100%">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam amet quo sequi? Magni, similique vitae, harum dolores.</p>
+            </div>
+        </div>
+
+        <center>
+            <small style="color: gray"> ~ consectetur adipisicing elit ~</small>
+            <h1>Lorem ipsum dolor sit</h1>
+            <div style="height: 0.4rem; width: 6rem; background-color: rgb(25, 25, 25); margin-top: 0.6rem"></div>
+        </center>
+
+        <br />
+        <br />
+
+        <div style="width: 95%" class="container-fluid">
+            <div style="background-color: rgb(31, 31, 31); padding: 1rem; color: white" class="d-flex justify-content-center">
+                <select id="dropDown" onchange="filterFunctionClicked()" class="color-filter-dropdown nav-link"></select>
+                <script type="text/x-template" class="color-filter-template">
+                    <option value="" id="color-default" >All Colors</option>
+                    {{#each this}}
+                        <option value="{{this}}" style="color: {{this}}" >{{this}}</option>
+                    {{/each}}
+                </script>
+                &nbsp;&nbsp;&nbsp;
+                <select id="dropDown" onchange="filterFunctionClicked()" class="brand-filter-dropdown nav-link"></select>
+                <script type="text/x-template" class="brand-filter-template">
+                    <option value="">All Brands</option>
+                    {{#each this}}
+                        <option value="{{this}}">{{this}}</option>
+                    {{/each}}
+                </script>
+                &nbsp;&nbsp;&nbsp;
+                <select style="color: white" id="dropDown" onchange="filterFunctionClicked()" class="size-filter-dropdown">
+                    <option value="">All Sizes</option>
+                    <option value="4">size 4</option>
+                    <option value="5">size 5</option>
+                    <option value="6">size 6</option>
+                    <option value="7">size 7</option>
+                    <option value="8">size 8</option>
+                </select>
+            </div>
+
+            <br /><br />
+            <div class="row shoe-box-placeholder"></div>
+        </div>
+
+        <script type="text/x-template" class="shoe-box-template">
             {{#each shoesArray}}
-                <div class="col-md-3 col-6 ">
+                {{#gt this.quantity 0}}
+                <div style="margin:0" class="col-md-3 col-6 ">
                     <div  class="shoe-box card">
                         <img style="height:15rem" class="img-fluid" src="{{this.image}}" alt="">
                         <div class="card-body">
-                            <h6 style="margin-bottom: 0rem;"> {{this.title}} </h6>
+                            <h6 style="margin-bottom: 0rem;font-wight:600"> {{this.title}} </h6>
                             <small style="color: gray;">  {{this.brand}}  </small>
 
                             <div class="row">
-                                <div class="col-7">
-                                    <p> R {{this.price}} </p>
+                                <div class="col-sm-7">
+                                    <p style="font-size:0.9rem" > R {{this.price}} </p>
                                 </div>
-                                <div class="col-5">
+                                <div class="col-sm-5">
                                     <p  style="color:rgb(190, 123, 0);font-size: 0.9rem;">{{this.quantity}} in stock</p>
                                 </div>
                             </div>
@@ -150,6 +150,7 @@
                         </div>
                     </div>
                 </div>
+                {{/gt}}
             {{/each}}
         </script>
 
@@ -159,5 +160,5 @@
         <script src="js/business-logic.js"></script>
         <script src="js/shopingCart.js"></script>
         <script src="js/main.js"></script>
-    </html>
-</body>
+    </body>
+</html>

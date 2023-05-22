@@ -1,3 +1,27 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap');
+
+
+body{
+    font-family: "Raleway";
+    font-weight: 500;
+}
+
+h1{
+    font-family: "Cormorant Garamond";
+}
+small{
+    font-family: "Raleway";
+    font-weight: 400;
+    font-size: 0.8rem !important;
+}
+p{
+    font-family: "Raleway";
+    font-weight: 500;
+}
+
 .shoe-box{
     border-radius: 0;
     margin-bottom: 0.7rem;
@@ -31,5 +55,20 @@ td{
     font-size: 4rem;
     font-family: serif;
     font-weight:700;
-    text-shadow: 0 0 6px rgb(67, 67, 67);
+    text-shadow: 0 0 6px rgb(0, 0, 0);
+    font-family: "Cormorant Garamond";
+}
+
+#carouselExampleIndicators{
+    background-color: black !important;
+}
+.carousel-item img{
+    opacity: 0.4;
+}
+
+
+@media screen and (max-width:500px) {
+    .container-fluid{
+        width: 100% !important;
+    }
 }
