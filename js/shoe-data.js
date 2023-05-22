@@ -5,44 +5,64 @@ function shoesData() {
         shoesArray: [
             
             {
-                title: "Bass Weejans",
-                brand: "GH BASS",
+                title: "Gucci Loafer",
+                brand: "Gucci",
                 size: "8",
-                price: 5550,
-                image:"https://www.ghbass.com/media/catalog/product/b/a/baz2w455_baz2w455c15_on.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=410&width=410&canvas=410:410",
-                color: "red",
+                price: 11000,
+                image:"https://catalog-resize-images.thedoublef.com/9b85a5ca98152c0f1e4a1e2538b6ca2e/900/900/3079291M0C0_M_GUC-3154.b.jpg",
                 quantity: 5,
                 id:1
             },
             {
-                title: "John Craig",
-                brand: "Mike",
+                title: "BASS OCG WEEJUNS",
+                brand: "GH BASS",
                 size: "6",
-                price: 2500,
+                price: 3000,
                 image:"https://www.johncraig.co.za/wp-content/uploads/BAS02CO-BASS-OCG-WEEJUNS-VENETIAN-LEATHER-BROWN-BA91005E-0CG-V1-600x600.jpg",
-                color: "red",
+                color: "brown",
                 quantity: 40,
                 id:2
             },
             {
-                title: "Gucci loafers",
-                brand: "Gucci",
-                size: "7",
-                price: 2500,
-                image:"https://image.harrods.com/gucci-leather-web-stripe-loafers_16165319_36472932_300.jpg" ,
-                color: "purple",
+                title: "Dr Martins 1460",
+                brand: "Dr Martin's",
+                size: "6",
+                price: 4000,
+                image:"https://img.fruugo.com/product/9/44/178237449_0340_0340.jpg" ,
+                color: "red",
                 quantity: 25,
                 id:3
+
             },
             {
-                title: "Christian Louboutin leather loafers",
+                title: "Christian Louboutin patent leather ",
                 brand: "Christian Louboutin",
                 size: "7",
                 price: 6000,
                 image:"https://image.harrods.com/christian-louboutin-no-penny-patent-leather-loafers_19241760_43422425_300.jpg" ,
-                color: "red",
+                color: "black",
                 quantity: 65,
                 id:4
+            },
+             {
+                title: "Gucci Stripped loafers",
+                brand: "Gucci",
+                size: "7",
+                price: 8000,
+                image:"https://image.harrods.com/gucci-leather-web-stripe-loafers_16165319_36472932_300.jpg" ,
+                color: "black",
+                quantity: 25,
+                id:5
+            },
+            {
+                title: "Versace Shoes ",
+                brand: "Versace",
+                size: "7",
+                price: 14000,
+                image:"https://cdn.shopify.com/s/files/1/0066/9561/6567/products/10a_4549f4b4-6776-4370-ba70-db1301b8b15c_600x.jpg?v=1608805423" ,
+                color: "Black & Gold",
+                quantity: 15,
+                id:6
             },
             
         ],

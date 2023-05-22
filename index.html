@@ -13,15 +13,11 @@
     <div class="container">
         <div class="d-flex">
             <select id="dropDown" onchange="filterFunctionClicked()" class="color-filter-dropdown" > 
-                <option value="" id="color-default"> Color </option>
-                <option  value="blue">  Blue </option>
-                <option  value = "black"> black </option>
-                <option  value = "red">  Red </option>
-                <option  value = "green">   Green </option>
+                
             </select>
 
             <script type="text/x-template" class="color-filter-template" >
-                <option value="" id="color-default" >Color</option>
+                <option value="" id="color-default" >All Colors</option>
                 {{#each this}}
                     <option value="{{this}}" style="color: {{this}}" >{{this}}</option>
                 {{/each}}
@@ -29,21 +25,18 @@
 
             &nbsp;&nbsp;&nbsp;
             <select id="dropDown" onchange="filterFunctionClicked()" class="brand-filter-dropdown" > 
-                <option value="">  Brand </option>
-                <option  value="Mike">  Mike </option>
-                <option  value = "carvela"> Carvela </option>
-                <option  value = "Bass"> Bass</option>
+       
             </select>
 
             <script type="text/x-template" class="brand-filter-template" >
-                <option value="">Brand</option>
+                <option value="">All Brands</option>
                 {{#each this}}
                     <option value="{{this}}">{{this}}</option>
                 {{/each}}
             </script>
             &nbsp;&nbsp;&nbsp;
             <select id="dropDown" onchange="filterFunctionClicked()" class="size-filter-dropdown"> 
-                <option value="">  Size </option>
+                <option value=""> All Sizes </option>
                 <option  value="4"> size 4 </option>
                 <option  value = "5"> size 5  </option>
                 <option  value = "6"> size  6 </option>
@@ -82,7 +75,7 @@
             {{#each shoesArray}}
                 <div class="col-md-3 col-6 ">
                     <div  class="shoe-box card">
-                        <img style="height:13rem" class="img-fluid" src="{{this.image}}" alt="">
+                        <img style="height:15rem" class="img-fluid" src="{{this.image}}" alt="">
                         <div class="card-body">
                             <h6 style="margin-bottom: 0rem;"> {{this.title}} </h6>
                             <small style="color: gray;">  {{this.brand}}  </small>
@@ -96,7 +89,7 @@
                                 </div>
                             </div>
 
-                            <button onclick="shoppingCart().addShoe({{this.id}})" style="width: 100%;" class="btn btn-warning btn-block btn-sm">
+                            <button onclick="shoppingCart().addShoe({{this.id}})" style="width: 100%;border-radius:0" class="btn btn-dark btn-block btn-sm">
                                 add to cart
                             </button>
 
