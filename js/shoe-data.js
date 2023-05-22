@@ -10,6 +10,7 @@ function shoesData() {
                 size: "8",
                 price: 11000,
                 image:"https://catalog-resize-images.thedoublef.com/9b85a5ca98152c0f1e4a1e2538b6ca2e/900/900/3079291M0C0_M_GUC-3154.b.jpg",
+                color:"green",
                 quantity: 5,
                 id:1
             },

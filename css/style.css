@@ -6,3 +6,30 @@
 td{
     width: 300px;
 }
+
+
+#dropDown{
+    border: none;
+    background: none;
+    margin: 0rem;
+}
+
+.slide-wrapper{
+    height: 550px;
+    margin-bottom: 3rem;
+}
+.text-container{
+    color: rgb(238, 238, 238);
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-container h1{
+    font-size: 4rem;
+    font-family: serif;
+    font-weight:700;
+    text-shadow: 0 0 6px rgb(67, 67, 67);
+}
