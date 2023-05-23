@@ -46,35 +46,31 @@
 
     <body>
         <div class="slide-wrapper">
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div style="margin: 0;padding: 0;width:100%"  id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 3"></button> -->
                 </div>
-                <div class="carousel-inner">
+                <div style="margin: 0;padding: 0;width:100%" class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="5000">
-                        <img style="height: 550px; width: 100%" src="images/michael-lee-5Z9bgfRZLLE-unsplash.jpg" class="img-fluid" alt="..." />
+                        <div class="carousel-one">
+
+                        </div>
                     </div>
-                    <!-- <div class="carousel-item d-none" data-bs-interval="3000">
-                    <img style="height: 550px;width: 100%;" src="images/clem-onojeghuo-kPBfy6kDnjQ-unsplash.jpg" class="img-fluid" alt="...">
-                </div> -->
+              
                     <div class="carousel-item" data-bs-interval="5000">
-                        <img style="height: 550px; width: 100%" src="images/andrew-neel-HqtYwlY9dxs-unsplash.jpg" class="img-fluid" alt="..." />
+                        <div class="carousel-two">
+
+                        </div>
                     </div>
                     <div class="carousel-item" data-bs-interval="5000">
-                        <img style="height: 550px; width: 100%" src="images/clem-onojeghuo-iuvLYv85r40-unsplash.jpg" class="img-fluid" alt="..." />
+                        <div class="carousel-three">
+
+                        </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                
             </div>
 
             <div align="center" class="text-container">
@@ -127,10 +123,10 @@
         <script type="text/x-template" class="shoe-box-template">
             {{#each shoesArray}}
                 {{#gt this.quantity 0}}
-                <div style="margin:0" class="col-md-3 col-6 ">
-                    <div  class="shoe-box card">
+                <div class="col-md-3 col-6 shoe-box-wrapper">
+                    <div class="shoe-box card">
                         <img style="height:15rem" class="img-fluid" src="{{this.image}}" alt="">
-                        <div class="card-body">
+                        <div class="shoe-card-body card-body">
                             <h6 style="margin-bottom: 0rem;font-wight:600"> {{this.title}} </h6>
                             <small style="color: gray;">  {{this.brand}}  </small>
 

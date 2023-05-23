@@ -39,7 +39,7 @@ td{
 }
 
 .slide-wrapper{
-    height: 550px;
+    /* height: 100vh; */
     margin-bottom: 3rem;
 }
 .text-container{
@@ -50,6 +50,7 @@ td{
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
+   
 }
 .text-container h1{
     font-size: 4rem;
@@ -64,11 +65,44 @@ td{
 }
 .carousel-item img{
     opacity: 0.4;
-}
+    width: 100%;
 
+}
+.carousel-one{
+    background-image: url("../images/michael-lee-5Z9bgfRZLLE-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 80vh;
+}
+.carousel-two{
+    background-image: url("../images/andrew-neel-HqtYwlY9dxs-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 80vh;
+}
+.carousel-three{
+    background-image: url("../images/clem-onojeghuo-iuvLYv85r40-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 80vh;
+}
 
 @media screen and (max-width:500px) {
     .container-fluid{
         width: 100% !important;
+    }
+    .shoe-card-body{
+        height: 200px;
+    }
+    .shoe-box-wrapper{
+        margin:0rem;
+        padding:0rem
+    }
+}
+
+@media screen and (max-width:650px) {
+
+    .text-container{
+        width: 90%;
     }
 }
