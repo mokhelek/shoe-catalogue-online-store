@@ -63,9 +63,6 @@ function filterFunctionClicked() {
 }
 
 
-
-
-
 shoeBoxPlaceholder.innerHTML = compiledTemplate(shoes);
 
 // **********************************  Shopping Cart Counter  **********************************
@@ -84,8 +81,6 @@ if(localStorage["cart-shoes"]){
 
 
 cartCounterElem.innerHTML = cartItemsCounter ;
-
-
 
 
 
