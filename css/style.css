@@ -33,6 +33,13 @@
     background-color: white;
     padding: 0.6rem;
 }
+input{
+    background: none;
+    border-radius: none;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
 
 
 

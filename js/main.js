@@ -53,6 +53,10 @@ function filterFunctionClicked() {
     shoes.shoesArray = shoeCatalogueInstance.myFilterFunction(titleSearchFilter.value, brandFilterDropdown.value, colorFilterDropdown.value, sizeFilterDropdown.value);
     shoeBoxPlaceholder.innerHTML = compiledTemplate(shoes);
 }
+// const searchForm = document.querySelector(".search-form");
+// searchForm.addEventListener("submit",function(){
+//     filterFunctionClicked();
+// })
 
 shoeBoxPlaceholder.innerHTML = compiledTemplate(shoes);
 
