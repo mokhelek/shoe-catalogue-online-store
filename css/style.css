@@ -3,10 +3,45 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap');
 
+@font-face {
+    font-family: "Romla";
+    src: url("Romla-ax6A5.otf");
+}
+
+.logo{
+    font-family: Romla;
+    font-size: 2.1rem;
+    font-weight: 700;
+    letter-spacing: 0.6rem;
+    color: black !important;
+    text-decoration: none;
+}
+
+.first-menu{
+    display: flex;
+    margin-top: 1rem;
+}
+.first-menu li{
+    list-style: none;
+    margin: 0rem 1rem 0rem 1rem;
+}
+.second-menu{margin-top: 0.5rem;}
+
+.navbar-expand-lg{
+    height: 65px; 
+    box-shadow: 0 0 6px rgb(58, 58, 58);
+    background-color: white;
+    padding: 0.6rem;
+}
+
+
+
+
 
 body{
     font-family: "Raleway";
     font-weight: 500;
+    background-color: #f2f2f2;
 }
 
 h1{
@@ -86,6 +121,49 @@ td{
     background-size:cover;
     height: 80vh;
 }
+
+
+.colors-options{
+    min-height: 100px;
+    background-color: rgb(216, 216, 216);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.color{
+    height: 25px;
+    width:25px;
+    background-color: green;
+    border-radius: 50%;
+    margin:1.5rem ;
+    border: 2px white solid;
+}
+.color1{
+    height: 25px;
+    width:25px;
+    background-color: brown;
+    border-radius: 50%;
+    margin:1.5rem ;
+    border: 2px white solid;
+}
+.color2{
+    height: 25px;
+    width:25px;
+    background-color: black;
+    border-radius: 50%;
+    margin:1.5rem ;
+    border: 2px white solid;
+}
+.color3{
+    height: 25px;
+    width:25px;
+    background-color: red;
+    border-radius: 50%;
+    margin:1.5rem ;
+    border: 2px white solid;
+}
+
 
 @media screen and (max-width:500px) {
     .container-fluid{
