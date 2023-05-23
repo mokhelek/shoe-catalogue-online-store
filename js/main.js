@@ -49,14 +49,22 @@ colorFilterDropdown.innerHTML = compiledColorTemplate(colorsArray) ;
 
 
 function filterFunctionClicked() {
+    const noShoes = document.querySelector(".no-shoes-message");
     console.log(titleSearchFilter.value, brandFilterDropdown.value, colorFilterDropdown.value, sizeFilterDropdown.value);
     shoes.shoesArray = shoeCatalogueInstance.myFilterFunction(titleSearchFilter.value, brandFilterDropdown.value, colorFilterDropdown.value, sizeFilterDropdown.value);
-    shoeBoxPlaceholder.innerHTML = compiledTemplate(shoes);
+    
+    if(shoes.shoesArray.length > 0){
+        noShoes.classList.remove("show")
+        shoeBoxPlaceholder.innerHTML = compiledTemplate(shoes);
+    }else{
+        shoeBoxPlaceholder.innerHTML = ""
+        noShoes.classList.add("show")
+    }
 }
-// const searchForm = document.querySelector(".search-form");
-// searchForm.addEventListener("submit",function(){
-//     filterFunctionClicked();
-// })
+
+
+
+
 
 shoeBoxPlaceholder.innerHTML = compiledTemplate(shoes);
 

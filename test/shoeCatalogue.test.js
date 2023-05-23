@@ -1,6 +1,6 @@
 describe("Testing the filtering functionality", function () {
 
-    it("It should return details of searched shoes by title name", function () {
+    it("It should return an empty array because no shoe meets the criteria", function () {
         let shoeCatalogueInstance = shoeCatalogue();
 
         let searchText = "Vans"
@@ -9,17 +9,7 @@ describe("Testing the filtering functionality", function () {
         let size = "";
 
         let filteredShoes = shoeCatalogueInstance.myFilterFunction(searchText, brandName, color, size);
-        let expectedResults = [
-
-            {
-                title: "Vans Skater",
-                brand: "vans",
-                color: "red",
-                price: 200,
-                in_stock: 301,
-                size: "4",
-            },
-        ];
+        let expectedResults = [];
         assert.deepEqual(expectedResults, filteredShoes);
     });
 

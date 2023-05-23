@@ -44,16 +44,27 @@
     background-color: white;
     padding: 0.6rem;
 }
-input{
+
+
+.title-search-filter{
     background: none;
     border-radius: none;
     border: none;
     box-shadow: none;
     outline: none;
 }
+.no-shoes-message{
+    height: 60vh;
+    display: none;
+}
+.empty-bag{
+    height: 60vh;
+    display: none;
+}
 
-
-
+.show{
+    display: block !important;
+}
 
 
 body{
