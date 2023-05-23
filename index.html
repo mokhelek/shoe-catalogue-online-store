@@ -12,7 +12,7 @@
     <nav class="navbar navbar-expand-lg sticky-top">
         <div style="width: 95%" class="container-fluid">
             <div style="width: 100%" class="row">
-                <div class="col-4">
+                <div class="col-4 d-none d-sm-block">
                     <ul class="first-menu">
                         <li class="nav-item">
                             <a class="nav-link" href="#">Home</a>
@@ -22,12 +22,15 @@
                         </li>
                     </ul>
                 </div>
+
+
                 <div class="col-4">
                     <div align="center">
                         <a class="logo" href="#">Kat'Walker</a>
                     </div>
                 </div>
-                <div class="col-4 second-menu">
+
+                <div class="col-4 second-menu d-none d-sm-block">
                     <div class="d-flex align-items-center justify-content-end">
                         <a href="shopingCart.html" class="btn btn-sm position-relative nav-link">
                             <div>
@@ -50,6 +53,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </nav>
@@ -61,6 +65,8 @@
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 3"></button>
+
                 </div>
                 <div style="margin: 0; padding: 0; width: 100%" class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="5000">
@@ -73,18 +79,29 @@
                     <div class="carousel-item" data-bs-interval="5000">
                         <div class="carousel-three"></div>
                     </div>
+
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <div class="carousel-five"></div>
+                    </div>
+                  
+                </div>
                 </div>
             </div>
 
             <div align="center" class="text-container">
-                <h1>MY HERO TEXT</h1>
-                <p style="width: 100%">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam amet quo sequi? Magni, similique vitae, harum dolores.</p>
+                <h1>My hero text</h1>
+                <p style="width: 100%">
+                    Step into luxury with our collection of high-end shoes. 
+                    From designer brands to handcrafted masterpieces, our shoes will make you feel like a million bucks
+                </p>
+                <br>
+                <a id="cta" href="#shoes" class="btn btn-lg">Shop Now</a>
             </div>
         </div>
 
         <center>
-            <small style="color: gray"> ~ consectetur adipisicing elit ~</small>
-            <h1 id="shoes">Lorem ipsum dolor sit</h1>
+            <small style="color: rgb(97, 97, 97)"> ~ Made with the finest materials ~</small>
+            <h1 id="shoes"> Walk In Style With Our Luxurious Shoes</h1>
             <div style="height: 0.4rem; width: 6rem; background-color: rgb(25, 25, 25); margin-top: 0.6rem"></div>
         </center>
 
@@ -169,42 +186,3 @@
     </body>
 </html>
 
-<!-- 
-
-    <nav class="navbar navbar-expand-lg sticky-top" style="height: 65px; box-shadow: 0 0 6px rgb(58, 58, 58); background-color: white">
-        <div class="container-fluid">
-            <a style="margin-right: 5rem" class="navbar-brand" href="#">Kat'Walker</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a style="border: 0rem; background: none" class="nav-link btn btn-secondary" aria-current="page" href="index.html">Home</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="newShoe.html">Add Shoe</a>
-                    </li>
-                </ul>
-                <a style="border: none; background: none; margin-right: 2rem" href="shopingCart.html" class="btn-sm position-relative nav-link" name="submit">
-                    <div>
-                        <?xml version="1.0" encoding="utf-8"?>Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools
-                        <svg fill="#787878" width="30px" height="30px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3,22H21a1,1,0,0,0,1-1.077l-1-13A1,1,0,0,0,20,7H17A5,5,0,0,0,7,7H4a1,1,0,0,0-1,.923l-1,13A1,1,0,0,0,3,22ZM12,4a3,3,0,0,1,3,3H9A3,3,0,0,1,12,4ZM4.926,9H7v2a1,1,0,0,0,2,0V9h6v2a1,1,0,0,0,2,0V9h2.074l.846,11H4.08Z" /></svg>
-                        <span class="cartCounter" style="color: #4d4d4d ;">
-                     5 
-                </span> 
-                        <span class="position-absolute top-0 start-50 badge rounded-pill bg-dark cartCounter" style="font-size: 0.65rem; margin-left: 0.6rem"> 0 </span>
-                    </div>
-                </a>
-
-                <form class="d-flex" role="search">
-                    <input onchange="filterFunctionClicked()" class="form-control me-2 form-control-sm title-search-filter" type="search" placeholder="Search" aria-label="Search" />
-                    <button style="border-radius: 0" class="btn btn-outline-dark btn-sm" type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-    </nav>
-
-
- -->
