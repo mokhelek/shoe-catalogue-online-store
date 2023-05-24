@@ -1,4 +1,3 @@
-
 // **************************************************** ADD TO SHOPPING BAG DOM **********************************************
 
 
@@ -20,8 +19,8 @@ if(cartArr.length > 0){
     cartShoesWrapperElem.innerHTML = compiledCartShoesTemplate(cartArr)
 }else{
     emptyBag.classList.add("show")
-
 }
+
 
 function quantityDOM(action, shoeId, max){
     let quantityCounterElem = document.querySelector(`.quantity-counter-${shoeId}`);

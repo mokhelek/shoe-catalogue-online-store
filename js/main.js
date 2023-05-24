@@ -75,10 +75,16 @@ let cartItemsArr = [] ;
 if(localStorage["cart-shoes"]){
     cartItemsArr = JSON.parse(localStorage["cart-shoes"]) ;
 }
+
  for(let shoeObj of cartItemsArr){
     cartItemsCounter += shoeObj.buyQuantity ;
  }
 
+// if(shoppingCart().addShoe()){
+
+// }
+
+const addToBag = document.querySelector(`#add-to-bag-${this.id}`)
 
 cartCounterElem.innerHTML = cartItemsCounter ;
 

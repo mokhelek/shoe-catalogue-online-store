@@ -58,7 +58,12 @@ function shoppingCart() {
         let checkShoeInCart = getSelectedShoes().some((obj) => obj.id == cartShoe.id);
 
         if (checkShoeInCart) {
-            alert("already in the cart");
+            cartArray.pop(cartShoe)
+            storeSelectedShoes();
+
+            location.reload();
+            return "exists";
+
         } else {
             cartShoe.buyQuantity = 1;
             cartShoe.total = cartShoe.price ;
