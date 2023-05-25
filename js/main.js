@@ -78,13 +78,18 @@ if(localStorage["cart-shoes"]){
 
  for(let shoeObj of cartItemsArr){
     cartItemsCounter += shoeObj.buyQuantity ;
+
+    for(let shoesStock of shoesInstance.getShoes().shoesArray ){
+        if(shoesStock.id == shoeObj.id){
+            const addToBag = document.querySelector(`#add-to-bag-${shoesStock.id}`)
+            addToBag.innerHTML = "Remove From Bag"
+        }
+    }
  }
 
-// if(shoppingCart().addShoe()){
 
-// }
 
-const addToBag = document.querySelector(`#add-to-bag-${this.id}`)
+
 
 cartCounterElem.innerHTML = cartItemsCounter ;
 

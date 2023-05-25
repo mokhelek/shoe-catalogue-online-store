@@ -43,9 +43,6 @@ function shoppingCart() {
         cartArray = JSON.parse(localStorage["cart-shoes"]);
     }
 
-    function getStockShoes(){
-        return shoesInstance;
-    }
 
     function addShoe(shoeId) {
         function findShoe() {
@@ -56,15 +53,18 @@ function shoppingCart() {
         let cartShoe = findShoe();
 
         let checkShoeInCart = getSelectedShoes().some((obj) => obj.id == cartShoe.id);
-
+        
         if (checkShoeInCart) {
-            cartArray.pop(cartShoe)
+
+            let indexOfShoe = cartArray.indexOf(cartShoe) ;
+            cartArray.splice(indexOfShoe,1)
+            
+           
             storeSelectedShoes();
 
             location.reload();
-            return "exists";
 
-        } else {
+        } if(!checkShoeInCart) {
             cartShoe.buyQuantity = 1;
             cartShoe.total = cartShoe.price ;
             cartShoe.maximumItems = cartShoe.quantity ;
@@ -96,6 +96,11 @@ function shoppingCart() {
 
         cartArray[indexOfCartShoe].buyQuantity = buyQuantity;
         cartArray[indexOfCartShoe].total = Number(cartArray[indexOfCartShoe].price) * buyQuantity;
+        
+        if(cartArray[indexOfCartShoe].buyQuantity == 0){
+            cartArray.pop(indexOfCartShoe) ;
+        }
+
         storeSelectedShoes();
         location.reload()
     }

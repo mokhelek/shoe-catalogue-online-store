@@ -58,6 +58,11 @@
         </div>
     </nav>
 
+    <style>
+        .form-control{
+            border-radius: 0 !important;
+        }
+    </style>
 
     <body>
         <div class="container">
@@ -71,14 +76,18 @@
                         <input class="form-control" type="text" placeholder="Enter shoe name" id="title" />
                         <br />
                         <input class="form-control" type="text" placeholder="Enter shoe brand" id="brand" />
-                        <br />
-                        <input  class="form-control" type="number" placeholder="Enter shoe size" id="size" />
-                        <br />
-                        <input class="form-control" type="number" placeholder="Enter shoe price" id="price" />
-                        <br />
+
+                        <br>
+                        <div style="margin:0" class="input-group mb-3">
+                            <input type="number" class="form-control" id="size" placeholder="Shoe size" aria-label="size">
+                            <span class="input-group-text">R</span>
+                            <input type="number" class="form-control" id="price" placeholder="Shoe price" aria-label="price">
+                        </div>
+                        <!-- <br> -->
                         <input class="form-control" type="url" id="image" placeholder="Enter image url" />
                         <br />
-                        <input class="form-control" type="color" name="color" id="color" />
+                        <label for="color">Shoe Color</label><br>
+                        <input class="form-control" type="color" name="color" value="#b000e0" id="color" />
                         <br />
                         <input style="width: 100%;" type="submit" class="btn btn-outline-success btn-md"  value="submit" />
                     </form>
