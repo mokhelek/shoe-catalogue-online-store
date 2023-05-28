@@ -12,7 +12,6 @@
     font-family: Romla;
     font-size: 1.8rem;
     font-weight: 700;
-    /* letter-spacing: 0.6rem; */
     color: black !important;
     text-decoration: none;
 }
@@ -203,11 +202,20 @@ td{
         margin:0rem;
         padding:0rem
     }
+    .shoe-box{
+        margin-bottom: 0;
+    }
 }
 
 @media screen and (max-width:650px) {
 
     .text-container{
         width: 90%;
+    }
+    .logo{
+        font-size: 1.4rem;
+    }
+    nav{
+        height: 50px !important;
     }
 }
