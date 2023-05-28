@@ -36,7 +36,22 @@ function quantityDOM(action, shoeId, max){
     }
 }
 
+
 function buyButtonClicked(){
     shoppingCartInstance.buyFunction()
 }
 
+// ******************** Order Summery **************************
+const subtotals = document.querySelectorAll(".subtotal");
+const totalItems = document.querySelector(".total-items") ;
+
+let grandTotal = 0;
+
+for(let i = 0 ; i < subtotals.length ;i++){
+    grandTotal = grandTotal + Number(subtotals[i].innerHTML)
+}
+
+totalItems.innerHTML = cartArr.length
+
+const grandTotalElem = document.querySelector(".grand-total");
+grandTotalElem.innerHTML = grandTotal ;

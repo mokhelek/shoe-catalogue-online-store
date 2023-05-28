@@ -39,10 +39,10 @@ function shoppingCart() {
     let shoesInstance = shoesData();
 
     let cartArray = [];
+
     if (localStorage["cart-shoes"]) {
         cartArray = JSON.parse(localStorage["cart-shoes"]);
     }
-
 
     function addShoe(shoeId) {
         function findShoe() {
@@ -56,13 +56,11 @@ function shoppingCart() {
         
         if (checkShoeInCart) {
 
-            let indexOfShoe = cartArray.indexOf(cartShoe) ;
+            let indexOfShoe = getSelectedShoes().indexOf(cartShoe) ;
+
             cartArray.splice(indexOfShoe,1)
-            
            
             storeSelectedShoes();
-
-            location.reload();
 
         } if(!checkShoeInCart) {
             cartShoe.buyQuantity = 1;
@@ -98,15 +96,14 @@ function shoppingCart() {
         cartArray[indexOfCartShoe].total = Number(cartArray[indexOfCartShoe].price) * buyQuantity;
         
         if(cartArray[indexOfCartShoe].buyQuantity == 0){
-            cartArray.pop(indexOfCartShoe) ;
+            cartArray.splice(indexOfCartShoe,1) ;
         }
 
         storeSelectedShoes();
-        location.reload()
     }
 
     function buyFunction(){
-        let stockShoes =  shoesInstance.getShoes().shoesArray ; // ? this is just an array
+        let stockShoes =  shoesInstance.getShoes().shoesArray ;
 
         let updatedShoeStock = {}
 
@@ -123,10 +120,8 @@ function shoppingCart() {
 
         localStorage["stored-shoes"] =  JSON.stringify(updatedShoeStock) 
         clearCartItems()
-        location.reload()
 
     }
-
 
     function getSelectedShoes() {
         return cartArray;
@@ -134,15 +129,18 @@ function shoppingCart() {
 
     function storeSelectedShoes() {
         localStorage["cart-shoes"] = JSON.stringify(getSelectedShoes());
+        location.reload()
     }
 
     function clearCartItems(){
         localStorage.removeItem("cart-shoes") ;
+        location.reload()
     }
 
     return {
         addShoe,
         updateStockQuantity,
         buyFunction,
+        clearCartItems
     };
 }
