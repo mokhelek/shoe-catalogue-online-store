@@ -68,6 +68,8 @@ shoeBoxPlaceholder.innerHTML = compiledTemplate(shoes);
 // **********************************  Shopping Cart Counter  **********************************
 
 const cartCounterElem = document.querySelector(".cartCounter");
+const cartCounterElemLg = document.querySelector(".cartCounterLg");
+
 
 let cartItemsCounter = 0 ;
 let cartItemsArr = [] ;
@@ -92,6 +94,8 @@ if(localStorage["cart-shoes"]){
 
 
 cartCounterElem.innerHTML = cartItemsCounter ;
+cartCounterElemLg.innerHTML = cartItemsCounter ;
+
 
 
 
